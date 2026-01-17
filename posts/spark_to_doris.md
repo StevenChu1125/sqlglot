@@ -150,7 +150,7 @@ SELECT FROM_UNIXTIME(unix_ts)
 SELECT FROM_UNIXTIME(unix_ts, '%Y-%m-%d %T')
 ```
 
-Note: Doris requires an explicit format string.
+Note: Doris requires an explicit format string. The `%T` format specifier is equivalent to `%H:%M:%S` (time in HH:MM:SS format).
 
 ### UNIX_TIMESTAMP
 
@@ -494,8 +494,8 @@ SELECT
   o.order_id,
   u.user_name,
   o.total_amount
-FROM orders o
-INNER JOIN users u ON o.user_id = u.user_id
+FROM orders AS o
+INNER JOIN users AS u ON o.user_id = u.user_id
 WHERE o.order_date >= '2024-01-01'
 ```
 
@@ -573,6 +573,8 @@ SELECT
 FROM monthly_sales
 ORDER BY `month`
 ```
+
+Note: SQLGlot automatically adds backticks around `month` because it's a reserved keyword in Doris. Reserved words are automatically quoted to prevent syntax errors.
 
 ## Known Limitations
 
