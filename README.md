@@ -518,6 +518,14 @@ A hosted version is on the [SQLGlot website](https://sqlglot.com/), or you can b
 make docs-serve
 ```
 
+### Guides and Articles
+
+- [SparkSQL to Doris SQL Migration Guide](https://github.com/tobymao/sqlglot/blob/main/posts/spark_to_doris.md) - Comprehensive guide for migrating queries from SparkSQL to Doris
+- [Expression Tree Primer](https://github.com/tobymao/sqlglot/blob/main/posts/ast_primer.md) - Understanding SQLGlot's AST
+- [Onboarding Guide](https://github.com/tobymao/sqlglot/blob/main/posts/onboarding.md) - Contributing to SQLGlot
+- [SQL Diff](https://github.com/tobymao/sqlglot/blob/main/posts/sql_diff.md) - Comparing SQL queries
+- [Python SQL Engine](https://github.com/tobymao/sqlglot/blob/main/posts/python_sql_engine.md) - Executing SQL in Python
+
 ## Run Tests and Lint
 
 ```
